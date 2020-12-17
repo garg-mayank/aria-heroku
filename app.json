@@ -1,0 +1,43 @@
+{
+	"name": "Heroku AriaNG 21vianet. Heroku AriaNG 世纪互联版",
+	"description": "Run ariaNG on heroku",
+	"repository": "https://github.com/xinxin8816/heroku-ariang-21vianet",
+	"keywords": ["AriaNG"],
+	"env": {
+		"HEROKU_APP_NAME": {
+			"description": "This should be the same as \"App name\" above.",
+			"value": ""
+		},
+		"ARIA2C_SECRET": {
+			"description": "Aria2c's secret",
+			"value": ""
+		},
+		"RCLONE_CONFIG": {
+			"description": "Rclone config to mount in one line, replace line breaks with \"\\n\"",
+			"required": false
+		},
+		"RCLONE_DESTINATION": {
+			"description": "Rclone destination path, format \"[drivename A]:[remove path A]\"",
+			"required": false,
+			"value": "Google:tmp"
+		},
+		"RCLONE_DESTINATION_2": {
+			"description": "If you mount a second cloud drive, then fill in \"[drivename B]:[remove path B]\"",
+			"required": false,
+			"value": "OneDrive:tmp"
+		},
+		"UNPACK_PASSWORDS": {
+			"description": "unpack passwords in one line, replace line breaks with \"\\n\"",
+			"required": false,
+			"value": ""
+		}
+	},
+	"buildpacks": [
+		{
+			"url": "heroku/nodejs"
+		},
+		{
+			"url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+		}
+	]
+}
