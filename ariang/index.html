@@ -138,8 +138,10 @@
                                 ng-bind="('Finished / Stopped' | translate) + (globalStat && globalStat.numStopped > 0 ? ' (' + globalStat.numStopped + ')' : '')">Finished
                                 / Stopped</span></a></li>
                     <li class="header" translate>Settings</li>
-                    <li data-href-match="/settings/ariang"><a href="#!/settings/ariang"><i class="fa fa-cog"></i> <span
-                                translate>AriaNg Settings</span></a></li>
+                    <!-- <li data-href-match="/settings/ariang">
+                        <a href="#!/settings/ariang"><i class="fa fa-cog"></i> <span translate>AriaNg
+                                Settings</span></a>
+                    </li>
                     <li class="treeview"><a href="javascript:void(0);"><i class="fa fa-cogs"></i> <span translate>Aria2
                                 Settings</span> <span class="pull-right-container"><i
                                     class="fa fa-angle-left pull-right"></i></span></a>
@@ -162,14 +164,16 @@
                             <li data-href-match="/settings/aria2/advanced"><a href="#!/settings/aria2/advanced"><span
                                         translate>Advanced Settings</span></a></li>
                         </ul>
-                    </li>
-                    <li class="ng-cloak" data-href-match="/debug" ng-if="enableDebugMode()"><a href="#!/debug"><i
-                                class="fa fa-wrench"></i> <span translate>AriaNg Debug Console</span></a></li>
-                    <li data-href-match="/status"><a href="#!/status"><span class="label pull-right"
-                                ng-if="globalStatusContext.isEnabled || isCurrentRpcUseWebSocket"
-                                ng-class="{'label-primary': taskContext.rpcStatus === 'Connecting', 'label-success': taskContext.rpcStatus === 'Connected', 'label-danger': taskContext.rpcStatus === 'Disconnected'}"
-                                ng-bind="taskContext.rpcStatus | translate"></span> <i class="fa fa-server"></i> <span
-                                translate>Aria2 Status</span></a></li>
+                    </li> -->
+                    <!-- <li class="ng-cloak" data-href-match="/debug" ng-if="enableDebugMode()"> -->
+                    <!-- <a href="#!/debug">
+                        <i class="fa fa-wrench"></i> <span translate>AriaNg Debug Console</span></a></li> -->
+                    <li data-href-match="/status">
+                        <!-- <a href="#!/status"> -->
+                        <span class="label pull-right" ng-if="globalStatusContext.isEnabled || isCurrentRpcUseWebSocket"
+                            ng-class="{'label-primary': taskContext.rpcStatus === 'Connecting', 'label-success': taskContext.rpcStatus === 'Connected', 'label-danger': taskContext.rpcStatus === 'Disconnected'}"
+                            ng-bind="taskContext.rpcStatus | translate"></span>
+                        <i class="fa fa-server"></i> <span translate>Aria2 Status</span></a></li>
                 </ul>
             </section>
         </aside>

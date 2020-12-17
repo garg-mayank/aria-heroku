@@ -19,12 +19,13 @@
 				<label>App Secret</label>
 			</div>
 
-			<center><input type="submit" id="panel" name="" value="Go to Panel"> <input type="submit" id="downloads"
-					name="" value="View Downloaded Files">
+			<center>
+				<input type="submit" id="panel" name="" value="Go to Panel">
+				<!-- <input type="submit" id="downloads" name="" value="View Downloaded Files"> -->
 				<p>
-					<font size="1">Created by <a style="color: #FFFFFF"
+					<!-- <font size="1">Created by <a style="color: #FFFFFF"
 							href="https://github.com/martinetmayank">Mayank</a>
-					</font>
+					</font> -->
 			</center>
 		</form>
 
@@ -34,9 +35,9 @@
 		panel.onclick = function () {
 			open('/ariang/#!/settings/rpc/set/wss/' + location.hostname + '/443/jsonrpc/' + btoa(pass.value), '_blank')
 		}
-		downloads.onclick = function () {
-			open('/downloads/' + btoa(pass.value) + '/')
-		}
+		// downloads.onclick = function () {
+		// 	open('/downloads/' + btoa(pass.value) + '/')
+		// }
 	</script>
 
 	<script type="text/javascript" src="js/ThreeWebGL.js"></script>
