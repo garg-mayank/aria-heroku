@@ -1,8 +1,8 @@
 {
-	"name": "heroku-aria2c",
+	"name": "heroku-aria",
 	"version": "1.0.0",
 	"main": "index.js",
-	"author": "xinxin8816 <i@qxin.uu.me>",
+	"author": "mayank",
 	"license": "MIT",
 	"dependencies": {
 		"express": "^4.17.1",
@@ -15,5 +15,10 @@
 	},
 	"engines": {
 		"node": "12.x"
+	},
+	"description": "Build AriaNG on Heroku, and upload to cloud drive when the file download completed.<br>\r Heroku AriaNG",
+	"repository": {
+		"type": "git",
+		"url": "git@other:garg-mayank/aria-heroku.git"
 	}
 }

@@ -1,7 +1,7 @@
 {
-	"name": "Heroku AriaNG 21vianet. Heroku AriaNG 世纪互联版",
+	"name": "Heroku Aria",
 	"description": "Run ariaNG on heroku",
-	"repository": "https://github.com/xinxin8816/heroku-ariang-21vianet",
+	"repository": "https://github.com/garg-mayank/aria-heroku",
 	"keywords": ["AriaNG"],
 	"env": {
 		"HEROKU_APP_NAME": {
@@ -32,8 +32,7 @@
 			"value": ""
 		}
 	},
-	"buildpacks": [
-		{
+	"buildpacks": [{
 			"url": "heroku/nodejs"
 		},
 		{

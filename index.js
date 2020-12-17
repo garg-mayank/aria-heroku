@@ -46,8 +46,7 @@ if (process.env.HEROKU_APP_NAME) {
 	const APP_URL = `https://${process.env.HEROKU_APP_NAME}.herokuapp.com`
 	const preventIdling = () => {
 		request.post(
-			'http://localhost:6800/jsonrpc',
-			{
+			'http://localhost:6800/jsonrpc', {
 				json: {
 					jsonrpc: '2.0',
 					method: 'aria2.getGlobalStat',
@@ -57,7 +56,10 @@ if (process.env.HEROKU_APP_NAME) {
 			},
 			async (err, resp, body) => {
 				console.log('preventIdling: getGlobalStat response', body)
-				const { numActive, numWaiting } = body.result
+				const {
+					numActive,
+					numWaiting
+				} = body.result
 				const numUpload = await readNumUpload()
 				console.log(
 					'preventIdling: numbers',
@@ -67,8 +69,8 @@ if (process.env.HEROKU_APP_NAME) {
 				)
 				if (
 					parseInt(numActive) +
-						parseInt(numWaiting) +
-						parseInt(numUpload) >
+					parseInt(numWaiting) +
+					parseInt(numUpload) >
 					0
 				) {
 					console.log('preventIdling: make request to prevent idling')
